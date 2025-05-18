@@ -1,7 +1,7 @@
 "Filed out from Dolphin Smalltalk 7"!
 
 Object subclass: #Libreria
-	instanceVariableNames: 'id direccion'
+	instanceVariableNames: 'id nombre direccion'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -10,10 +10,11 @@ Libreria comment: ''!
 !Libreria categoriesForClass!Kernel-Objects! !
 !Libreria methodsFor!
 
-iniLibreriaId: unId direccion: unaDireccion
+iniLibreriaId: unId nombre: unNombre direccion: unaDireccion
 	"Inicializa una libreria"
 
 	id := unId.
+	nombre := unNombre.
 	direccion := unaDireccion.!
 
 modiDireccion: unaDireccion
@@ -26,6 +27,11 @@ modiId: unId
 
 	id := unId.!
 
+modiNombre: unNombre
+	"Modifica el nombre de la libreria"
+
+	nombre := unNombre.!
+
 verDireccion
 	"Retorna la direccion de la libreria"
 
@@ -34,18 +40,25 @@ verDireccion
 verId
 	"Retorna el id de la libreria"
 
-	^id.! !
-!Libreria categoriesFor: #iniLibreriaId:direccion:!private! !
+	^id.!
+
+verNombre
+	"Retorna el nombre de la libreria"
+
+	^nombre.! !
+!Libreria categoriesFor: #iniLibreriaId:nombre:direccion:!private! !
 !Libreria categoriesFor: #modiDireccion:!public! !
 !Libreria categoriesFor: #modiId:!public! !
+!Libreria categoriesFor: #modiNombre:!public! !
 !Libreria categoriesFor: #verDireccion!public! !
 !Libreria categoriesFor: #verId!public! !
+!Libreria categoriesFor: #verNombre!public! !
 
 !Libreria class methodsFor!
 
-crearLibreriaId: unId direccion: unaDireccion
+crearLibreriaId: unId nombre: unNombre direccion: unaDireccion
 	"Retorna una libreria inicializada"
 
-	^(self new) iniLibreriaId: unId direccion: unaDireccion.! !
-!Libreria class categoriesFor: #crearLibreriaId:direccion:!public! !
+	^(self new) iniLibreriaId: unId nombre: unNombre direccion: unaDireccion.! !
+!Libreria class categoriesFor: #crearLibreriaId:nombre:direccion:!public! !
 
