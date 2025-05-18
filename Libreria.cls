@@ -1,7 +1,7 @@
 "Filed out from Dolphin Smalltalk 7"!
 
 Object subclass: #Libreria
-	instanceVariableNames: 'id'
+	instanceVariableNames: 'id nombre'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -10,29 +10,42 @@ Libreria comment: ''!
 !Libreria categoriesForClass!Kernel-Objects! !
 !Libreria methodsFor!
 
-iniLibreriaId: unId
+iniLibreriaId: unId nombre: unNombre
 	"Inicializa una libreria"
 
-	id := unId.!
+	id := unId.
+	nombre := unNombre.!
 
 modiId: unId
 	"Modifica el id de la libreria"
 
 	id := unId.!
 
+modiNombre: unNombre
+	"Modifica el nombre de la libreria"
+
+	nombre := unNombre.!
+
 verId
 	"Retorna el id de la libreria"
 
-	^id.! !
-!Libreria categoriesFor: #iniLibreriaId:!private! !
+	^id.!
+
+verNombre
+	"Retorna el nombre de la libreria"
+
+	^nombre.! !
+!Libreria categoriesFor: #iniLibreriaId:nombre:!private! !
 !Libreria categoriesFor: #modiId:!public! !
+!Libreria categoriesFor: #modiNombre:!public! !
 !Libreria categoriesFor: #verId!public! !
+!Libreria categoriesFor: #verNombre!public! !
 
 !Libreria class methodsFor!
 
-crearLibreriaId: unId
+crearLibreriaId: unId nombre: unNombre
 	"Retorna una libreria inicializada"
 
-	^(self new) iniLibreriaId: unId.! !
-!Libreria class categoriesFor: #crearLibreriaId:!public! !
+	^(self new) iniLibreriaId: unId nombre: unNombre.! !
+!Libreria class categoriesFor: #crearLibreriaId:nombre:!public! !
 
