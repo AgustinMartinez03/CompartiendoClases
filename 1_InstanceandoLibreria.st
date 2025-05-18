@@ -1,3 +1,3 @@
 | l |
-l := Libreria crearLibreriaId: 1.
+l := Libreria crearLibreriaId: 1 nombre: 'Bichito de luz'.
 l inspect.
